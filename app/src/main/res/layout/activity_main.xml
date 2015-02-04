@@ -1,0 +1,33 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity">
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/scramble"
+        android:id="@+id/scrambleButton"
+        android:background="@color/primaryColorDark"
+        android:layout_marginBottom="32dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:elevation="5dp" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/userInputField"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:editable="true"
+        android:layout_above="@+id/scrambleButton"
+        android:layout_toStartOf="@id/scrambleButton"
+        android:layout_alignEnd="@+id/scrambleButton"
+        android:textIsSelectable="false"
+        android:hint="@string/textFieldHint" />
+
+
+</RelativeLayout>
