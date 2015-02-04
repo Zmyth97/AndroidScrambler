@@ -110,7 +110,6 @@ public class MainActivity extends Activity {
             for (int count = 0; count < TextUtils.split(scrambledMessage.toString(), " ").length; count++) {
                 String[] words = TextUtils.split(scrambledMessage.toString(), " ");
 
-                System.out.println(scrambledMessage + words[count]);
                 finalMessage = finalMessage + " " + scramble(words[count]);
             }
         }
@@ -118,7 +117,6 @@ public class MainActivity extends Activity {
         {
             finalMessage = " You Need to Enter a Message To Scramble";
         }
-        System.out.println(finalMessage);
         return finalMessage;
     }
 
@@ -132,7 +130,6 @@ public class MainActivity extends Activity {
             public void onClick(View currentView) {
                 getWindow().setExitTransition(new Explode());
                 Intent myIntent = new Intent(currentView.getContext(), ScrambledActivity.class);
-                System.out.println("Sent: " + scrambler());
                 myIntent.putExtra("scrambledAnswer", scrambler());
                 startActivityForResult(myIntent, 0);
             }
